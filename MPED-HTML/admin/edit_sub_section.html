@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/font-awesome.min.js"></script>
+        <script src="js/functions.js"></script>
+        <title>MPED Admin Panel</title>
+    </head>
+
+<body>
+   <div class="admin_panel">
+        <header>
+            <div class="menu d-flex">
+                <div class="side_menu">
+                    <div class="side_menu_logo">
+                        <img src="./assets/imgs/Logo Dark.png">
+                    </div>
+                    <div class="side_menu_items d-flex flex-wrap flex-column">
+                        <div class="menu_item">
+                            <img src="./assets/imgs/main_cat_icon.svg">
+                            <a href="main_list.html" class="tajawal-bold active">الأقسام الرئيسية</a>    
+                        </div>
+                        <div class="sub_menu">
+                            <div class="sub_menu_title">
+                                <h2>بيانات النظام</h2>
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/users.png">
+                                <a href="users_list.html">المستخدمين</a>    
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/Group.png">
+                                <a href="groups_list.html">المجموعات <span class="count_numbers">5</span></a>  
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/files.png">
+                                <a href="files_list.html">الملفات المشتركة</a>    
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="main_menu">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="search_input">
+                                <input type="text" placeholder="البحث" autocomplete="off">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <div class="logout d-flex align-items-center">
+                                <div class="notify position-relative">
+                                    <a href = "#">
+                                        <span class="active"></span>
+                                        <i class="fa-regular fa-bell"></i>
+                                    </a>
+                                </div>
+                                <div class="pp mx-2">
+                                <a href="#"><img src = "assets/imgs/pp.jpg"></a> 
+                                </div>
+                                <div class="logout_icon d-flex">
+                                    <a href = "#">تسجيل الخروج <img src="assets/imgs/logout.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="page_title">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center">
+                            <a href="#" class="back_btn"><i class="fa-solid fa-arrow-right-long mx-1"></i> رجوع</a>
+                            <h1 class="main_title">اضافة جديد</h1>
+                            <a href="main_list.html" class="sub_title">تصنيف</a>
+                            <a href="main_list.html" class="sub_title">قسم فرعى</a>
+                            <p class="current_page">اضافة جديد</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container-fluid">
+                    <div class="global_data mb-5 edit_data">
+                        <div class="row flex-column">
+                            <div class="col-12 mb-4">
+                                <div class="data_title">
+                                    <h1>1.المعلومات الاساسية</h1>
+                                </div>
+                                <div class="input_group">
+                                    <label class="image_upload_label"> <img src="./assets/imgs/jpg.png">صورة <span class="text-danger">*</span></label>
+                                    <div class="image-upload-container">
+                                        <input type="file" id="image-upload-input" accept="image/*">
+                                        <label for="image-upload-input" class="image-upload-label">
+                                            <div class="plus-icon">+</div>
+                                        </label>
+                                        <div id="image-preview" class="w-100 h-100"></div>
+                                    </div>  
+                                </div>
+                                <div class="d-flex flex-wrap">
+                                    <div class="col-8 px-1">
+                                        <div class="input_group d-flex flex-column">
+                                            <label>الأسم <span class="text-danger">*</span></label>
+                                            <input type="text" placeholder="الأسم" value="بوابة محرك البحث المتقدم">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-4 px-1">
+                                        <div class="input_group d-flex flex-column">
+                                            <label>الترتيب <span class="text-danger">*</span></label>
+                                            <select>
+                                                <option value="1">1</option>
+                                                <option value="2" selected>2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input_group d-flex flex-column">
+                                            <label>عنوان URL <span class="text-danger">*</span></label>
+                                            <select>
+                                                <option value="default">عنوان URL</option>
+                                                <option value="1" selected>https://www.testone.com</option>
+                                                <option value="2">https://www.testtwo.com</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input_group d-flex flex-column">
+                                            <label>القسم التابع له <span class="text-danger">*</span></label>
+                                            <select>
+                                                <option value="1">بوابة محرك البحث المتقدم 1</option>
+                                                <option value="2" selected>بوابة محرك البحث المتقدم 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="data_title">
+                                    <h1>2.الصلاحيات</h1>
+                                </div>
+                                <div class="input_group d-flex flex-column mb-3">
+                                    <label>مخصص ل <span class="text-danger">*</span></label>
+                                    <div class="d-flex px-3">
+                                        <div class="d-flex align-items-center">
+                                            <input type="radio" id="all" name="access" value="all">
+                                            <label class="mb-0" for="all">الكل</label><br>
+                                        </div>
+                                        <div class="d-flex mx-3 align-items-center">
+                                            <input type="radio" id="used" name="access" value="used" checked>
+                                            <label class="mb-0" for="used">مستخدم</label><br>
+                                        </div>
+                                        
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                                    <div class="dropdown">
+                                        <button class="text-start w-100 drop_down_groups_btn"></button>
+                                        <div class="dropdown-groups">
+                                          <input type="text" id="search_groups" placeholder="بحث...">
+                                          <div class="checkbox-groups">
+                                            <label><input type="checkbox" value="احمد بديرعلي السيد"> احمد بديرعلي السيد</label>
+                                            <label><input type="checkbox" value="سمير السيد احمد"> سمير السيد احمد</label>
+                                            <!-- Add more checkboxes as needed -->
+                                          </div>
+                                        </div>
+
+                                        <div class="all_tags">
+                                            <div class="user_group_tag" data-value="سمير السيد احمد"> 
+                                                 <div class="user_tag_img">
+                                                    <img src="./assets/imgs/pp.jpg">
+                                                 </div>
+                                                 سمير السيد احمد
+                                                 <div class="close-icon me-2">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </div>
+                                            </div>
+                                            <div class="user_group_tag" data-value="احمد بديرعلي السيد">
+                                                <div class="user_tag_img">
+                                                    <p style="background-color: #FFC542;">ا ب</p>
+                                                 </div>
+                                                احمد بديرعلي السيد
+                                                <div class="close-icon me-2">
+                                                    <i class="fa-solid fa-xmark"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                               
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btns mx-3 mb-5 d-flex">
+                        <a href="#" class="main_btn px-5">اضافه</a>
+                        <a href="#" class="secondry_btn mx-2 px-5">الغاء</a>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+   </div>
+</body>
+
+</html>
+
+
+<script>
+//javascript code to show image after select it
+document.getElementById('image-upload-input').addEventListener('change', function() {
+  var input = this;
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        var imagePreview = document.getElementById('image-preview');
+        imagePreview.innerHTML = '<img class="w-100 h-100 object-cover" src="' + e.target.result + '" alt="Selected Image">';
+    }
+    reader.readAsDataURL(input.files[0]);
+    } 
+});
+
+
+// Get the dropdown button and content
+    const dropdownToggle = document.querySelector('.drop_down_groups_btn');
+    const dropdownContent = document.querySelector('.dropdown-groups');
+    const dropdown = document.querySelector('.dropdown');
+
+    // Toggle the dropdown content visibility
+    dropdownToggle.addEventListener('click', function(e) {
+    dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+    });
+
+</script>

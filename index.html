@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/font-awesome.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/slick.min.js"></script>
+        <title>MPED</title>
+    </head>
+
+<body class="user_body">
+    
+    <main>
+        <!-- The div that contain the logo, form and the background image which is added in the css file -->
+        <div class="login_bg">
+
+            <!---------- The div that contain the logo image  --------->
+            <div class = "logo">
+                <div class = "container">
+                    <div class = "row justify-content-center py-3">
+                        <img src = "./assets/imgs/logo.png" class="h-auto">
+                    </div>
+                </div>
+            </div>
+            <!---------- The div that contain the logo image  --------->
+
+            <!---------- The div that contain the login form --------->
+            <div class = "login_form my-2 my-md-5">
+                <div class = "container">
+                    <div class = "row justify-content-center">
+
+                            <div class = "col-12 mb-3 mb-md-5">
+                                <div class = "login_form_title">
+                                    <h1 class="text-center">بوابة الدخول إلى مستودع البيانات</h1>
+                                </div>
+                            </div>
+                            
+                            <div class = "col-12 col-md-4">
+                                <form method = "post" action = "main.html" id="login">
+                                    <div class="form-group d-flex flex-column mb-3">
+                                        <label for="InputEmail" class="mb-2 text-white">اسم المستخدم</label>
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="اسم المستخدم">
+                                            <img src = "./assets/imgs/sms.png" class="input_logo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-column mb-4">
+                                        <label for="Inputpassword" class="mb-2 text-white">كلمة المرور</label>
+                                        <div class="position-relative">
+                                            <input type="password" class="form-control" id="Inputpassword" aria-describedby="emailHelp" placeholder="كلمة المرور">
+                                            <img src = "./assets/imgs/key-square.png" class="input_logo">
+                                            <a href="#"><img src = "./assets/imgs/blind 1.png" class="hide_pw_logo"></a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group d-flex flex-column">
+                                        <div class="position-relative">
+                                            <input type="submit" value="تسجيل الدخول" class="form-control" id="submit_login">
+                                        </div>
+                                    </div>
+                                    <div class="error_msg my-2">
+                                        <p class="text-danger text-center"> <i class="fa-solid fa-circle-exclamation mx-1"></i>أسم المستخدم او كلمة السر غير صحيحة</p>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+            <!---------- The div that contain the login form --------->
+
+        </div>
+        <!-- The end of div that contain the logo, form and the background image which is added in the css file -->
+    </main>
+
+
+    <!-- The Footer can be ignored bec. it doesn't has any data or style -->
+    <footer>
+    </footer>
+    <!-- The Footer can be ignored bec. it doesn't has any data or style -->
+</body>
+
+</html>
+

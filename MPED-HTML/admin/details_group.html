@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/font-awesome.min.js"></script>
+        <script src="js/functions.js"></script>
+        <title>MPED Admin Panel</title>
+    </head>
+
+<body>
+    <div class="admin_panel">
+        <header>
+            <div class="menu d-flex">
+                <div class="side_menu">
+                    <div class="side_menu_logo">
+                        <img src="./assets/imgs/Logo Dark.png">
+                    </div>
+                    <div class="side_menu_items d-flex flex-wrap flex-column">
+                        <div class="menu_item">
+                            <img src="./assets/imgs/main_cat_icon.svg">
+                            <a href="main_list.html" class="tajawal-bold active">الأقسام الرئيسية</a>    
+                        </div>
+                        <div class="sub_menu">
+                            <div class="sub_menu_title">
+                                <h2>بيانات النظام</h2>
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/users.png">
+                                <a href="users_list.html">المستخدمين</a>    
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/Group.png">
+                                <a href="groups_list.html">المجموعات <span class="count_numbers">5</span></a>  
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/files.png">
+                                <a href="files_list.html">الملفات المشتركة</a>    
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="main_menu">
+                   <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="search_input">
+                                <input type="text" placeholder="البحث" autocomplete="off">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <div class="logout d-flex align-items-center">
+                                <div class="notify position-relative">
+                                    <a href = "#">
+                                        <span class="active"></span>
+                                        <i class="fa-regular fa-bell"></i>
+                                    </a>
+                                </div>
+                                <div class="pp mx-2">
+                                   <a href="#"><img src = "assets/imgs/pp.jpg"></a> 
+                                </div>
+                                <div class="logout_icon d-flex">
+                                    <a href = "#">تسجيل الخروج <img src="assets/imgs/logout.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="page_title">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center">
+                            <a href="groups_list.html" class="back_btn"><i class="fa-solid fa-arrow-right-long mx-1"></i> رجوع</a>
+                            <h1 class="main_title">تفاصيل المجموعة</h1>
+                            <a href="groups_list.html" class="sub_title">المجموعات</a>
+                            <p class="current_page">تفاصيل المجموعة</p>
+                        </div>
+                        <div class="col-5 d-flex align-items-center justify-content-end">
+                            <a href="add.html" class="main_btn"> <i class="fa-solid fa-pen me-2"></i> <span class="mx-2">تعديل بيانات المجموعة</span></a>
+                            <div class="export mx-2">
+                                <a href="#"><img src="./assets/imgs/print.png" class="w-75"></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section>
+                <div class="container-fluid">
+                    <div class="global_data mb-4">
+                       <div class="row align-items-center">
+                            <div class="col-12">
+                                <div class="details d-flex">
+                                    <div class="d-flex flex-column justify-content-end mx-4">
+                                            <div class="d-flex details_access group_details_data mb-1 align-items-center">
+                                                <h1>مجموعة مستخدمي تطبيقات البحث الإلكترونية</h1>
+                                                <p class="mb-0 mx-3 status active"> active</p>
+                                            </div>
+                                            <div class="group_info_data d-flex flex-column">
+                                                    <p>لا يوجد بيانات</p>
+                                            </div>  
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+    
+                    <div class="d-flex flex-wrap align-items-center justify-content-between mb-3 section_data_title">
+                        <div class="data_title">
+                            <h1> إدارة المستخدمين والصلاحيات</h1>
+                        </div>
+                        <a href="add.html" class="main_btn"> <i class="fa-solid fa-plus"></i><span class="mx-2">اضافه مستخدم جديد </span></a>
+                    </div>
+    
+                    <div class="global_data mb-4">
+                        <div class="row align-items-center">
+                             <div class="col-12">
+                                  <ul class="nav nav-pills mb-3" id="user_info_tabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                      <button class="nav-link active" id="user_info-tab" data-bs-toggle="pill" data-bs-target="#user_info" type="button" role="tab" aria-controls="user_info" aria-selected="true">المستخدمين المعينون <span class="count_numbers mx-1">87</span></button>
+                                    </li>
+                                    <li class="nav-item mx-4" role="presentation">
+                                      <button class="nav-link" id="user_related_group-tab" data-bs-toggle="pill" data-bs-target="#user_related_group" type="button" role="tab" aria-controls="user_related_group" aria-selected="false">الصلاحيات</button>
+                                    </li>
+                                    
+                                  </ul>
+                                  <div class="tab-content user_info_tabs_content" id="user_info_tabs_content">
+                                    <div class="tab-pane fade show active" id="user_info" role="tabpanel" aria-labelledby="user_info-tab">
+                                        
+                                    </div>
+                                    <div class="tab-pane fade" id="user_related_group" role="tabpanel" aria-labelledby="user_related_group-tab">
+                                        <div class="group_auth d-flex flex-column">
+                                            <div class="group_auth_title mb-3">
+                                                <h1>محرك بحث منظومة الخطة الاستثمارية</h1>
+                                            </div>
+                                            <div class="group_auth_data">
+                                                <p class="mb-2">جهة الاسناد الرئيسية (جهة الإشراف) </p>
+                                                <input type="text" value="وزارة العدل" disabled>
+                                            </div>
+                                            <div class="group_auth_data">
+                                                <p class="mb-2">جهة الاسناد الرئيسية (جهة الإشراف) </p>
+                                                <input type="text" value="وزارة العدل" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                             </div>
+                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+    
+    
+            <section class="delete_msg_table" id="delete_msg_table">
+                <div class="container">
+                     <div class="row justify-content-center">
+                         <div class="delete_msg_table_content position-relative py-5 px-3 flex-column align-items-center justify-content-center">
+                                 <div id="close_msg">
+                                     <i class="fa-solid fa-xmark close"></i>
+                                 </div>
+                             <i class="fa-solid fa-trash"></i>
+                             <h1>هل أنت متأكد أنك تريد حذف هذا المستخدم؟</h1>
+                             <p>هل أنت متأكد أنك تريد حذف هذا المستخدم؟ سيؤدي هذا إلى مسح بيانات المستخدم الخاص بك بشكل دائم.</p>
+                             <div class="delete_msg_btns">
+                                 <a class="delete" id="confirm_delete" href = "#">نعم، احذف</a>
+                                 <a class="cancel mx-3" id="confirm_cancel" href = "#">الغاء</a>
+                             </div>
+                         </div>
+                     </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // javascript code to select all in the table
+    document.addEventListener('DOMContentLoaded', function() {
+        // select all checkbox code
+        const selectAllCheckbox = document.getElementById('check_all');
+        const otherCheckboxes = document.querySelectorAll('.global_table td input[type="checkbox"]:not(#selectAll)');
+        selectAllCheckbox.addEventListener('change', function() {
+            // Set the state of all other checkboxes to match the "select all" checkbox
+            otherCheckboxes.forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        })
+    
+    
+        // javascript code to show the popup of actions (edit and delete) on hover
+        const hoverButtons = document.querySelectorAll(".hover-button");
+        const popups = document.querySelectorAll(".popup");
+        hoverButtons.forEach((button, index) => {
+            let isHovered = false;
+
+            button.addEventListener('click', function(e){
+                e.preventDefault();
+            })
+            button.addEventListener("mouseover", function() {
+            isHovered = true;
+            popups[index].style.display = "block";
+            });
+
+            button.addEventListener("mouseout", function() {
+                isHovered = false;
+                setTimeout(function() {
+                    if (!isHovered) {
+                    popups[index].style.display = "none";
+                    }
+                }, 200);
+            });
+
+            popups[index].addEventListener("mouseover", function() {
+                isHovered = true;
+            });
+
+            popups[index].addEventListener("mouseout", function() {
+                isHovered = false;
+                setTimeout(function() {
+                    if (!isHovered) {
+                    popups[index].style.display = "none";
+                    }
+                }, 200);
+            });
+        });
+
+        // javascript code to show the popup of delete message
+        const delete_item = document.querySelectorAll(".delete_item");
+        var delete_msg = document.getElementById("delete_msg_table");
+        var close_delete_msg = document.getElementById("close_msg");
+        var confirm_delete = document.getElementById("confirm_delete");
+        var confirm_cancel = document.getElementById("confirm_cancel");
+        delete_item.forEach((button, index) => {
+            button.addEventListener('click', function(e){
+            e.preventDefault();
+            console.log('delete');
+            delete_msg.style.display = "flex";
+        })
+
+        })
+        
+        close_delete_msg.addEventListener('click',function(e){
+            //add your code here
+            // --------
+            
+            delete_msg.style.display = "none";
+        })
+        confirm_delete.addEventListener('click',function(e){
+            e.preventDefault();
+            //add your code here
+            // --------
+            delete_msg.style.display = "none";
+        })
+        confirm_cancel.addEventListener('click',function(e){
+            e.preventDefault();
+            //add your code here
+            // --------
+            delete_msg.style.display = "none";
+        })
+    })
+
+</script>
+
+

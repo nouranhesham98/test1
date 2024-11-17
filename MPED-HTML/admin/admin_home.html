@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/font-awesome.min.js"></script>
+        <script src="js/functions.js"></script>
+        <title>MPED Admin Panel</title>
+    </head>
+
+<body>
+    <div class="admin_panel">
+        <header>
+            <div class="menu d-flex">
+                <div class="side_menu">
+                    <div class="side_menu_logo">
+                        <img src="./assets/imgs/Logo Dark.png">
+                    </div>
+                    <div class="side_menu_items d-flex flex-wrap flex-column">
+                        <div class="menu_item">
+                            <img src="./assets/imgs/main_cat_icon.svg">
+                            <a href="main_list.html" class="tajawal-bold active">الأقسام الرئيسية</a>    
+                        </div>
+                        <div class="sub_menu">
+                            <div class="sub_menu_title">
+                                <h2>بيانات النظام</h2>
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/users.png">
+                                <a href="users_list.html">المستخدمين</a>    
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/Group.png">
+                                <a href="groups_list.html">المجموعات <span class="count_numbers">5</span></a>  
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/files.png">
+                                <a href="files_list.html">الملفات المشتركة</a>    
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="main_menu">
+                   <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="search_input">
+                                <input type="text" placeholder="البحث" autocomplete="off">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <div class="logout d-flex align-items-center">
+                                <div class="notify position-relative">
+                                    <a href = "#">
+                                        <span class="active"></span>
+                                        <i class="fa-regular fa-bell"></i>
+                                    </a>
+                                </div>
+                                <div class="pp mx-2">
+                                   <a href="#"><img src = "assets/imgs/pp.jpg"></a> 
+                                </div>
+                                <div class="logout_icon d-flex">
+                                    <a href = "#">تسجيل الخروج <img src="assets/imgs/logout.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </header>
+        <main>
+         
+    
+            <section>
+                <div class="container-fluid">
+                    <div class="global_data admin_home">
+                      <div class="row justify-content-center">
+                        <div class="col-12 mb-3 d-flex justify-content-center mb-4">
+                            <img class="w-auto h-auto" src="./assets/imgs/Logo Dark.png">
+                        </div>
+                        <div class="col-4 mb-4">
+                            <a href="users_list.html">
+                                <div class="dashboard_card d-flex flex-column">
+                                    <!-- this is the div that will contain the title , status and actions -->
+                                    <div class="d-flex flex-wrap">
+                                        <div class="col-12">
+                                            <div class="card_title d-flex align-items-center">
+                                                <h1>عدد المستخدمين</h1>
+                                                <i class="fa-solid fa-user mx-3"></i>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="dashboard_data">
+                                        <p>3</p>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4 mb-4">
+                            <a href="groups_list.html">
+                                <div class="dashboard_card d-flex flex-column">
+                                    <!-- this is the div that will contain the title , status and actions -->
+                                    <div class="d-flex flex-wrap">
+                                        <div class="col-12">
+                                            <div class="card_title d-flex align-items-center">
+                                                <h1>عدد المجموعات</h1>
+                                                <i class="fa-solid fa-people-group mx-3"></i>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="dashboard_data">
+                                        <p>5</p>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-4 mb-4">
+                            <a href="files_list.html">
+                                <div class="dashboard_card d-flex flex-column">
+                                    <!-- this is the div that will contain the title , status and actions -->
+                                    <div class="d-flex flex-wrap">
+                                        <div class="col-12">
+                                            <div class="card_title d-flex align-items-center">
+                                                <h1>عدد الملفات</h1>
+                                                <i class="fa-solid fa-file mx-3"></i>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="dashboard_data">
+                                        <p>10</p>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                       
+                      </div>
+                    </div>
+            </section>
+
+
+         
+            
+           
+            
+        </main>
+    </div>
+</body>
+
+</html>
+
+
+
+
+

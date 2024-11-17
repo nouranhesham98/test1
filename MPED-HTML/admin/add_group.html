@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/font-awesome.min.js"></script>
+        <script src="js/functions.js"></script>
+        <title>MPED Admin Panel</title>
+    </head>
+
+<body>
+    <div class="admin_panel">
+        <header>
+            <div class="menu d-flex">
+                <div class="side_menu">
+                    <div class="side_menu_logo">
+                        <img src="./assets/imgs/Logo Dark.png">
+                    </div>
+                    <div class="side_menu_items d-flex flex-wrap flex-column">
+                        <div class="menu_item">
+                            <img src="./assets/imgs/main_cat_icon.svg">
+                            <a href="main_list.html" class="tajawal-bold active">الأقسام الرئيسية</a>    
+                        </div>
+                        <div class="sub_menu">
+                            <div class="sub_menu_title">
+                                <h2>بيانات النظام</h2>
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/users.png">
+                                <a href="users_list.html">المستخدمين</a>    
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/Group.png">
+                                <a href="groups_list.html">المجموعات <span class="count_numbers">5</span></a>  
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/files.png">
+                                <a href="files_list.html">الملفات المشتركة</a>    
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="main_menu">
+                   <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="search_input">
+                                <input type="text" placeholder="البحث" autocomplete="off">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <div class="logout d-flex align-items-center">
+                                <div class="notify position-relative">
+                                    <a href = "#">
+                                        <span class="active"></span>
+                                        <i class="fa-regular fa-bell"></i>
+                                    </a>
+                                </div>
+                                <div class="pp mx-2">
+                                   <a href="#"><img src = "assets/imgs/pp.jpg"></a> 
+                                </div>
+                                <div class="logout_icon d-flex">
+                                    <a href = "#">تسجيل الخروج <img src="assets/imgs/logout.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="page_title">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center">
+                            <a href="groups_list.html" class="back_btn"><i class="fa-solid fa-arrow-right-long mx-1"></i> رجوع</a>
+                            <h1 class="main_title">اضافة مجموعة جديدة</h1>
+                            <a href="groups_list.html" class="sub_title">المجموعات</a>
+                            <p class="current_page">اضافة مجموعة جديدة</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+    
+            <section>
+                <div class="container-fluid">
+                    <div class="global_data mb-5">
+                        <div class="row flex-column">
+                            <div class="col-12 mb-4">
+                                <div class="data_title">
+                                    <h1>1.المعلومات الاساسية</h1>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input_group d-flex flex-column">
+                                            <label>الأسم <span class="text-danger">*</span></label>
+                                            <input type="text" placeholder="الأسم">
+                                            <p class="error_msg text-danger">هذا الحقل مطلوب</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="input_group d-flex flex-column">
+                                            <label>الوصف <span class="text-danger">*</span></label>
+                                            <input type="text" placeholder="الوصف">
+                                            <p class="error_msg text-danger">هذا الحقل مطلوب</p>
+                                        </div>
+                                    </div>                              
+                                    <div class="col-12">
+                                        <div class="input_group d-flex flex-column">
+                                            <label>الحالة <span class="text-danger">*</span></label>
+                                            <select>
+                                                <option value="1">ACTIVE</option>
+                                                <option value="2">NOT ACTIVE </option>
+                                            </select>
+                                            <p class="error_msg text-danger">هذا الحقل مطلوب</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-12">
+                                <div class="data_title">
+                                    <h1>2.الصلاحيات</h1>
+                                </div>
+                                <div class="group_access">
+                                    <div class="d-flex flex-wrap flex-column">
+                                        <div class="dropdown_group d-flex align-items-center">
+                                            <input type="checkbox" name="check_one" id="check_one" value="check_one">
+                                            <label for="check_one">محرك بحث منظومة الخطة الاستثمارية</label>
+                                        </div>
+                                        <div class="group_access_details d-flex flex-column">
+                                            <div class="group_categories d-flex w-100">
+                                                <a href="#" class="active">جهة الاسناد الرئيسية (جهة الإشراف)</a>
+                                                <a href="#">جهة الاسناد الفرعية (جهة التنفيذ)</a>
+                                                <a href="#">محافظات</a>
+                                            </div>
+                                            <div class="dropdown w-100">
+                                                <button class="text-start w-100 drop_down_groups_btn"></button>
+                                                <div class="dropdown-groups">
+                                                  <input type="text" id="search_groups" placeholder="بحث...">
+                                                  <div class="checkbox-groups">
+                                                    <label><input type="checkbox" value="1مجموعة مستخدمي تطبيقات البحث الإلكترونية"> 1مجموعة مستخدمي تطبيقات البحث الإلكترونية</label>
+                                                    <label><input type="checkbox" value="2مجموعة مستخدمي تطبيقات البحث الإلكترونية"> 2مجموعة مستخدمي تطبيقات البحث الإلكترونية</label>
+                                                    <label><input type="checkbox" value="3مجموعة مستخدمي تطبيقات البحث الإلكترونية"> 3مجموعة مستخدمي تطبيقات البحث الإلكترونية</label>
+                                                    <!-- Add more checkboxes as needed -->
+                                                  </div>
+                                                  
+                                                </div>
+                                                <div class="all_tags">
+                                                    <p class="select_all">الكل</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group_access">
+                                    <div class="d-flex flex-wrap flex-column">
+                                        <div class="dropdown_group d-flex align-items-center">
+                                            <input type="checkbox" name="check_two" id="check_two" value="check_two">
+                                            <label for="check_two">محرك بحث منظومة الخطة الاستثمارية</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="group_access">
+                                    <div class="d-flex flex-wrap flex-column">
+                                        <div class="dropdown_group d-flex align-items-center">
+                                            <input type="checkbox" name="check_three" id="check_three" value="check_three">
+                                            <label for="check_three">محرك بحث منصة بيان</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="group_access">
+                                    <div class="d-flex flex-wrap flex-column">
+                                        <div class="dropdown_group d-flex align-items-center">
+                                            <input type="checkbox" name="check_four" id="check_four" value="check_four">
+                                            <label for="check_four">الدخل والانفاق</label>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                           
+                        </div>
+                    </div>
+                    <div class="success_msg">
+                        <p class="mb-0 text-center text-success">تم أضافة المجموعة بنجاح</p>
+                    </div>
+                    <div class="btns mx-3 mb-5 d-flex">
+                        <a href="#" class="main_btn px-5">اضافه</a>
+                        <a href="#" class="secondry_btn mx-2 px-5">الغاء</a>
+                       
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+//javascript code for the groups dropdown element
+
+// Get the dropdown button and content
+const dropdownToggle = document.querySelector('.drop_down_groups_btn');
+const dropdownContent = document.querySelector('.dropdown-groups');
+const dropdown = document.querySelector('.dropdown');
+
+// Toggle the dropdown content visibility
+dropdownToggle.addEventListener('click', function() {
+dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+});
+
+// Get all checkboxes and the search input
+const checkboxes = document.querySelectorAll('.checkbox-groups input[type="checkbox"]');
+const search_groups = document.getElementById('search_groups');
+
+// Handle checkbox selection
+checkboxes.forEach(checkbox => {
+checkbox.addEventListener('change', function() {
+    if (this.checked) {
+    createTag(this.value);
+    } else {
+    removeTag(this.value);
+    }
+});
+});
+
+// Create a tag for the selected item and encapsulate all tags
+function createTag(value) {
+const tag = document.createElement('div');
+tag.classList.add('user_group_tag');
+tag.textContent = value;
+tag.setAttribute('data-value', value);
+
+// Create the "X" icon using Font Awesome
+const closeIcon = document.createElement('i');
+const close_icon_container = document.createElement('div');
+close_icon_container.classList.add('close-icon', 'me-2');
+closeIcon.classList.add('fas', 'fa-times');
+close_icon_container.appendChild(closeIcon);
+close_icon_container.addEventListener('click', function(e) {
+    e.preventDefault();
+    removeTag(value);
+    const checkbox = Array.from(dropdownContent.querySelectorAll('.checkbox-groups input[type="checkbox"]'))
+    .find(input => input.value === value);
+    if (checkbox) {
+    checkbox.checked = false;
+    }
+});
+
+// Append the "X" icon and the tag to the "tag" div
+tag.appendChild(close_icon_container);
+
+// Append the tag to the "all_tags" div
+const allTagsDiv = dropdown.querySelector('.all_tags');
+if (allTagsDiv) {
+    allTagsDiv.appendChild(tag);
+} else {
+    const newAllTagsDiv = document.createElement('div');
+    newAllTagsDiv.classList.add('all_tags');
+    newAllTagsDiv.appendChild(tag);
+    dropdown.appendChild(newAllTagsDiv);
+}
+}
+
+// Remove the tag for the deselected item
+function removeTag(value) {
+const tag = dropdown.querySelector(`.user_group_tag[data-value="${value}"]`);
+if (tag) {
+    tag.remove();
+}
+}
+
+
+</script>

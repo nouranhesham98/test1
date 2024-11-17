@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/font-awesome.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/slick.min.js"></script>
+    <title>MPED</title>
+</head>
+
+<body class="user_body">
+    <!-- header component -->
+    <header>
+        <div class="container">
+            <div class="row position-relative justify-content-between">
+                <div class="col-3">
+                    <div class="header_logo">
+                        <img src = "assets/imgs/logo.png" class="w-100">
+                    </div>
+
+                </div>
+                <div class="col-8 d-flex align-items-center justify-content-end">
+                    <div class="notify position-relative">
+                        <a href = "#">
+                            <span class="active"></span>
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+                    </div>
+                    <div class="pp mx-2">
+                       <a href="#"><img src = "assets/imgs/pp.jpg"></a> 
+                    </div>
+                    <div class="logout d-flex me-2">
+                        <a href = "#">تسجيل الخروج <img src="assets/imgs/logout.png"></a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header component -->
+
+     <!-- breadcrump component -->
+    <div class="bread_crump py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-8 d-flex flex-column flex-wrap">
+                    <div class="bread_crump_list d-flex flex-wrap">
+                        <a href="#">التطبيقات</a>
+                        <a href="#">بوابة ادخال وتحديث البيانات</a>
+                        <a href="#">مستخلصات مشروعات حياة كريمة</a>
+                        <p> تعديل مشروع و تسويات جديده</p>
+                    </div>
+                    <div class="page_title">
+                        <h1 class="text-white tajawal-bold">تعديل مشروع و تسويات جديده</h1>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-end">
+                    <div class="back_btn">
+                        <a href = "settlement_add.html" class="d-flex align-items-center tajawal-bold"><span class="pb-1">الرجوع</span> <i class="fa-solid fa-left-long me-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- breadcrump component -->
+
+     <!-- This is the div that have background image of the page which is added in the css file -->
+    <div class="search_bg">
+    </div>
+    <!-- This is the div that have background image of the page which is added in the css file -->
+    <main>
+        
+
+       
+       <section id="table_types" class="my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex">
+                        <div class="btns_table_types w-100">
+                            <a href = "#" class="active">مشروع</a>
+                            <a href = "#">تسوية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+      
+
+       <!-- tables component -->
+       <section class="tables">
+            <div class="container">
+                <div class="row">
+                    <!----------- add form ------------->
+                    <div class="col-12 d-flex flex-wrap">
+                        <div class="col-12">
+                            <div class="table_title">
+                                <h1 class="text-white tajawal-bold">بيانات المشروع</h1>
+                            </div>
+                        </div>
+                       
+                        <div class="col-12 mt-3">
+                            <div class="settlement_form">
+                                <form method="post" action="#" class="position-relative" id="add_form">
+                                    
+                                    <div class="row">
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>جهة الاسناد الرئيسية (جهة الإشراف) <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="جهة الاسناد الرئيسية (جهة الإشراف)">
+                                            </div>
+                                            <p class="error text-danger mb-0">هذا الحقل مطلوب</p>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>مسلسل العقد <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="مسلسل العقد">
+                                            </div>
+                                            <p class="error text-danger mb-0">هذا الحقل مطلوب</p>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>المرحلة <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="المرحلة">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>جهة الاسناد الفرعية (جهة التنفيذ) <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="جهة الاسناد الفرعية (جهة التنفيذ)">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>كود المشروع <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="كود المشروع">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>مدة التنفيذ (بالأشهر)<span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="مدة التنفيذ (بالأشهر)">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>المحافظة <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="المحافظة">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>أسم المشروع <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="أسم المشروع">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>قيمة العقد(بألاف جنية) <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="قيمة العقد(بألاف جنية)">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>المركز <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="المركز">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>الوحدة المحلية <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="الوحدة المحلية">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>المنصرف حتى <span>31/7/2022</span>(بألاف جنية)<span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="col-4 mb-3 position-relative">
+                                            <div class="form-group d-flex flex-column">
+                                                <label>النشاط <span class="text-danger">*</span></label>
+                                                <input type="text" placeholder="النشاط">
+                                            </div>
+                                        </div>
+                                 
+                                    </div>
+            
+                                   
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!----------- add form ------------->
+
+
+                    
+
+
+                    <!----------- table ------------->
+                    <div class="col-12 d-flex flex-wrap my-5">
+                        <div class="col-6">
+                            <div class="table_title">
+                                <h1 class="text-white tajawal-bold">تسويات</h1>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <div>
+                                <a href="#" class="main_btn"> <i class="fa-solid fa-plus mx-1"></i> إضافة جديد </a>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="table_container settlement_table">
+                                <table class="w-100">
+                                    <thead>
+                                        <tr>
+                                            <td style="min-width: 200px;">رقم التسوية</td>
+                                            <td style="min-width: 200px;">تاريخ البيانات الواردة</td>
+                                            <td style="min-width: 200px;">رقم المستند</td>
+                                            <td style="min-width: 350px;">قيمة المستند المنصرف قبل المراجعة(بألاف جنية)</td>
+                                            <td style="min-width: 350px;">قيمة المستند المنصرف بعد المراجعة(بألاف جنية)</td>
+                                            <td style="min-width: 200px;">الاستبعاد(بألاف جنية)</td>
+                                            <td style="min-width: 200px;">رقم محضر الاعتماد</td>
+                                            <td style="min-width: 200px;">أمر الدفع</td>
+                                            <td style="min-width: 200px;">قيمة امر الدفع</td>
+                                            <td style="min-width: 200px;">ملاحظات</td>
+                                            <td style="min-width: 100px;">التحكم</td>
+                                            <td style="min-width: 70px;"></td>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="date" disabled value="2024-07-22"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 350px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 350px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><textarea rows="1" disabled></textarea></td>
+                                            <td style="min-width: 100px;"><a href ="#" class="main_btn"> <i class="fa-solid fa-pen mx-1"></i>تعديل </a></td>
+                                            <td style="min-width: 70px;"><span class="remove"><i class="fa-solid fa-xmark"></i></span></td>
+                                          </tr>
+                                          <tr>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="date" disabled value="2024-07-22"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 350px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 350px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><input type="text" disabled value="0.0000"></td>
+                                            <td style="min-width: 200px;"><textarea rows="1" disabled></textarea></td>
+                                            <td style="min-width: 100px;"><a href ="#" class="main_btn"> <i class="fa-solid fa-pen mx-1"></i>تعديل </a></td>
+                                            <td style="min-width: 70px;"><span class="remove"><i class="fa-solid fa-xmark"></i></span></td>
+                                          </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!----------- table ------------->
+                </div>
+            </div>
+       </section>
+       <!-- tables component -->
+       
+      
+    </main>
+    <!-- The Footer can be ignored bec. it doesn't has any data or style -->
+    <footer>
+    </footer>
+    <!-- The Footer can be ignored bec. it doesn't has any data or style -->
+</body>
+
+</html>
+
+
+

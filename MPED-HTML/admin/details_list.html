@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/fonts/fonts.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="./js/jquery.js"></script>
+        <script src="./js/font-awesome.min.js"></script>
+        <script src="js/functions.js"></script>
+        <title>MPED Admin Panel</title>
+    </head>
+
+<body>
+    <div class="admin_panel">
+        <header>
+            <div class="menu d-flex">
+                <div class="side_menu">
+                    <div class="side_menu_logo">
+                        <img src="./assets/imgs/Logo Dark.png">
+                    </div>
+                    <div class="side_menu_items d-flex flex-wrap flex-column">
+                        <div class="menu_item">
+                            <img src="./assets/imgs/main_cat_icon.svg">
+                            <a href="main_list.html" class="tajawal-bold active">الأقسام الرئيسية</a>    
+                        </div>
+                        <div class="sub_menu">
+                            <div class="sub_menu_title">
+                                <h2>بيانات النظام</h2>
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/users.png">
+                                <a href="users_list.html">المستخدمين</a>    
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/Group.png">
+                                <a href="groups_list.html">المجموعات <span class="count_numbers">5</span></a>  
+                            </div>
+                            <div class="sub_menu_item">
+                                <img src="./assets/imgs/files.png">
+                                <a href="files_list.html">الملفات المشتركة</a>    
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+                <div class="main_menu">
+                   <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <div class="search_input">
+                                <input type="text" placeholder="البحث" autocomplete="off">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                            <div class="logout d-flex align-items-center">
+                                <div class="notify position-relative">
+                                    <a href = "#">
+                                        <span class="active"></span>
+                                        <i class="fa-regular fa-bell"></i>
+                                    </a>
+                                </div>
+                                <div class="pp mx-2">
+                                   <a href="#"><img src = "assets/imgs/pp.jpg"></a> 
+                                </div>
+                                <div class="logout_icon d-flex">
+                                    <a href = "#">تسجيل الخروج <img src="assets/imgs/logout.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="page_title">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center">
+                            <a href="#" class="back_btn"><i class="fa-solid fa-arrow-right-long mx-1"></i> رجوع</a>
+                            <h1 class="main_title">تفاصيل القسم</h1>
+                            <a href="main_list.html" class="sub_title">الأقسام الرئيسية</a>
+                            <p class="current_page">تفاصيل القسم</p>
+                        </div>
+                        <div class="col-5 d-flex align-items-center justify-content-end">
+                            <a href="add.html" class="main_btn"> <i class="fa-solid fa-pen me-2"></i> <span class="mx-2">تعديل بيانات القسم</span></a>
+                            <div class="export mx-2">
+                                <a href="#"><img src="./assets/imgs/print.png" class="w-75"></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section>
+                <div class="container-fluid">
+                    <div class="global_data mb-4">
+                       <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="details d-flex">
+                                    <div class="details_img">
+                                        <img src="./assets/imgs/card-img.png">
+                                    </div>
+                                    <div class="details_data d-flex flex-column justify-content-center mx-2">
+                                            <h1>بوابة محرك البحث المتقدم</h1>
+                                            <p>الترتيب: <span>1</span></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <div class="details_access d-flex flex-column">
+                                    <h2>الأذونات و الصلاحيات</h2>
+                                    <p> <i class="fa-solid fa-check"></i> الكل</p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="data_title mb-3">
+                        <h1>تصنيف/قسم فرعي</h1>
+                    </div>
+                    <div class="global_table">
+                        <div class="search_actions">
+                            <div class="row">  
+                                <div class="search_input position-relative">
+                                    <input type="text" autocomplete="off" placeholder="البحث بالاسم ...">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            
+                                <div class="actions_dropdown">
+                                    <select name="actions" id="actions">
+                                        <option value="action">أجراءات</option>
+                                        <option value="delete">حذف</option>
+                                        <option value="edit">تعديل</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table_container d-flex flex-wrap">
+                            
+                                <table class="w-100">
+                                    <thead>
+                                        <tr>
+                                            <td style="min-width: 50px; max-width:50px;"><input type="checkbox" name="check_all" id="check_all" value="check_all"><label for="check_all"></label></td>
+                                            <td style="min-width: 90px; max-width:90px;">صورة</td>
+                                            <td style="min-width: 220px;">الاسم</td>
+                                            <td style="min-width: 220px;">عنوان URL</td>
+                                            <td style="min-width: 90px; max-width:90px;">الترتيب</td>
+                                            
+                                            <td>الاقسام الفرعية</td>
+                                            <td>الأذونات و الصلاحيات</td>
+                                            <td style="min-width: 50px; max-width:50px;"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="min-width: 50px; max-width:50px;"><input type="checkbox" name="check_one" id="check_one" value="check_one"><label for="check_one"></label></td>
+                                            <td style="min-width: 90px; max-width:90px;"><img src="./assets/imgs/Image.png"></td> 
+                                            <td style="min-width: 220px;">بوابة محرك البحث المتقدم</td>
+                                            <td style="min-width: 220px;"><a href="#">https://mped.eg/283</a></td>
+                                            <td style="min-width: 90px; max-width:90px;">1</td>
+                                            
+                                            <td>3</td>
+                                            <td>الكل</td>
+                                            <td class="position-relative d-flex justify-content-end" style="min-width: 90px; max-width:90px;">
+                                                <a href="#" class="add_sub"><i class="fa-solid fa-plus"></i></a>
+                                                <a href = "#" class="more_action hover-button me-3"><i class="fa-solid fa-ellipsis"></i></a>
+                                                
+                                                <div class="popup" id="popup">
+                                                    <a href ="edit_user.html"> <i class="fa-solid fa-pen mx-2"></i>تعديل </a>
+                                                    <a href ="delete" class="delete_item"> <i class="fa-solid fa-trash mx-2"></i>حذف</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="min-width: 50px; max-width:50px;"><input type="checkbox" name="check_two" id="check_two" value="check_two"><label for="check_two"></label></td>
+                                            <td style="min-width: 90px; max-width:90px;"><img src="./assets/imgs/Image.png"></td>
+                                            <td style="min-width: 220px;">بوابة محرك البحث المتقدم</td>
+                                            <td style="min-width: 220px;"><a href="#">https://mped.eg/283</a></td>
+                                            <td style="min-width: 90px; max-width:90px;">2</td>
+                                           
+                                            <td>3</td>
+                                            <td>الكل</td>
+                                            <td class="position-relative d-flex justify-content-end" style="min-width: 90px; max-width:90px;">
+                                                <a href="#" class="add_sub"><i class="fa-solid fa-plus"></i></a>
+                                                <a href = "#" class="more_action hover-button me-3"><i class="fa-solid fa-ellipsis"></i></a>
+                                                
+                                                <div class="popup" id="popup">
+                                                    <a href ="edit_user.html"> <i class="fa-solid fa-pen mx-2"></i>تعديل </a>
+                                                    <a href ="delete" class="delete_item"> <i class="fa-solid fa-trash mx-2"></i>حذف</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            
+                        </div>
+                        <div class="pagination d-flex justify-content-between">
+                            <div class="total_pages d-flex">
+                                <p class="ltr"> <span>1</span>-<span>10</span> of <span>195</span> </p>
+                                <p class="mx-1">العناصر</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="delete_msg_table" id="delete_msg_table">
+                <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="delete_msg_table_content position-relative py-5 px-3 flex-column align-items-center justify-content-center">
+                                    <div id="close_msg">
+                                        <i class="fa-solid fa-xmark close"></i>
+                                    </div>
+                                <i class="fa-solid fa-trash"></i>
+                                <h1>هل أنت متأكد أنك تريد حذف هذا المستخدم؟</h1>
+                                <p>هل أنت متأكد أنك تريد حذف هذا المستخدم؟ سيؤدي هذا إلى مسح بيانات المستخدم الخاص بك بشكل دائم.</p>
+                                <div class="delete_msg_btns">
+                                    <a class="delete" id="confirm_delete" href = "#">نعم، احذف</a>
+                                    <a class="cancel mx-3" id="confirm_cancel" href = "#">الغاء</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // javascript code to select all in the table
+    document.addEventListener('DOMContentLoaded', function() {
+        // select all checkbox code
+        const selectAllCheckbox = document.getElementById('check_all');
+        const otherCheckboxes = document.querySelectorAll('.global_table td input[type="checkbox"]:not(#selectAll)');
+        selectAllCheckbox.addEventListener('change', function() {
+            // Set the state of all other checkboxes to match the "select all" checkbox
+            otherCheckboxes.forEach(checkbox => {
+                checkbox.checked = selectAllCheckbox.checked;
+            });
+        })
+    // javascript code to show the popup of actions (edit and delete) on hover
+    const hoverButtons = document.querySelectorAll(".hover-button");
+        const popups = document.querySelectorAll(".popup");
+        hoverButtons.forEach((button, index) => {
+            let isHovered = false;
+
+            button.addEventListener('click', function(e){
+                e.preventDefault();
+            })
+            button.addEventListener("mouseover", function() {
+            isHovered = true;
+            popups[index].style.display = "block";
+            });
+
+            button.addEventListener("mouseout", function() {
+                isHovered = false;
+                setTimeout(function() {
+                    if (!isHovered) {
+                    popups[index].style.display = "none";
+                    }
+                }, 200);
+            });
+
+            popups[index].addEventListener("mouseover", function() {
+                isHovered = true;
+            });
+
+            popups[index].addEventListener("mouseout", function() {
+                isHovered = false;
+                setTimeout(function() {
+                    if (!isHovered) {
+                    popups[index].style.display = "none";
+                    }
+                }, 200);
+            });
+        });
+
+        // javascript code to show the popup of delete message
+        const delete_item = document.querySelectorAll(".delete_item");
+        var delete_msg = document.getElementById("delete_msg_table");
+        var close_delete_msg = document.getElementById("close_msg");
+        var confirm_delete = document.getElementById("confirm_delete");
+        var confirm_cancel = document.getElementById("confirm_cancel");
+        delete_item.forEach((button, index) => {
+            button.addEventListener('click', function(e){
+            e.preventDefault();
+            console.log('delete');
+            delete_msg.style.display = "flex";
+        })
+
+        })
+        
+        close_delete_msg.addEventListener('click',function(e){
+            //add your code here
+            // --------
+            
+            delete_msg.style.display = "none";
+        })
+        confirm_delete.addEventListener('click',function(e){
+            e.preventDefault();
+            //add your code here
+            // --------
+            delete_msg.style.display = "none";
+        })
+        confirm_cancel.addEventListener('click',function(e){
+            e.preventDefault();
+            //add your code here
+            // --------
+            delete_msg.style.display = "none";
+        })
+    })
+</script>
